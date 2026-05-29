@@ -1,45 +1,47 @@
 export default function Logo({ white = false, compact = false }) {
   const textColor = white ? '#FFFFFF' : '#1A1A1A'
 
+  const icon = (
+    <>
+      <rect width="48" height="48" rx="4" fill="#1A1A1A" />
+      {/* C — orange bracket */}
+      <rect x="5"  y="7"  width="17" height="5"  fill="#C85A0A" />
+      <rect x="5"  y="7"  width="5"  height="34" fill="#C85A0A" />
+      <rect x="5"  y="36" width="17" height="5"  fill="#C85A0A" />
+      {/* G — white bracket with crossbar */}
+      <rect x="26" y="7"  width="17" height="5"  fill="#FFFFFF" />
+      <rect x="26" y="7"  width="5"  height="34" fill="#FFFFFF" />
+      <rect x="26" y="36" width="17" height="5"  fill="#FFFFFF" />
+      <rect x="35" y="22" width="8"  height="5"  fill="#FFFFFF" />
+    </>
+  )
+
   if (compact) {
     return (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52" className="h-10 w-10">
-        <rect width="52" height="52" rx="5" fill="#1A1A1A" />
-        <path d="M9 47 L9 27 Q9 11 26 11 Q43 11 43 27 L43 47" fill="none" stroke="#C85A0A" strokeWidth="2.5" />
-        <line x1="6" y1="47" x2="46" y2="47" stroke="#C85A0A" strokeWidth="2.5" />
-        <text x="8" y="44" fontFamily="'Arial Black', Impact, sans-serif" fontSize="27" fontWeight="900" fill="#C85A0A">C</text>
-        <text x="27" y="44" fontFamily="'Arial Black', Impact, sans-serif" fontSize="27" fontWeight="900" fill="#FFFFFF">G</text>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" className="h-9 w-9">
+        {icon}
       </svg>
     )
   }
 
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248 52" className="h-10">
-      {/* Icon */}
-      <rect width="52" height="52" rx="5" fill="#1A1A1A" />
-      <path d="M9 47 L9 27 Q9 11 26 11 Q43 11 43 27 L43 47" fill="none" stroke="#C85A0A" strokeWidth="2.5" />
-      <line x1="6" y1="47" x2="46" y2="47" stroke="#C85A0A" strokeWidth="2.5" />
-      <text x="8" y="44" fontFamily="'Arial Black', Impact, sans-serif" fontSize="27" fontWeight="900" fill="#C85A0A">C</text>
-      <text x="27" y="44" fontFamily="'Arial Black', Impact, sans-serif" fontSize="27" fontWeight="900" fill="#FFFFFF">G</text>
-
-      {/* CONTRACTOR label */}
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 222 48" className="h-9">
+      {icon}
       <text
-        x="64" y="19"
+        x="62" y="17"
         fontFamily="'Barlow Condensed', 'Arial Narrow', sans-serif"
         fontSize="10.5"
         fontWeight="700"
         letterSpacing="3.5"
         fill={textColor}
       >CONTRACTOR</text>
-
-      {/* GARAGE main text */}
       <text
-        x="63" y="49"
+        x="61" y="46"
         fontFamily="'Barlow Condensed', 'Arial Narrow', sans-serif"
-        fontSize="32"
+        fontSize="31"
         fontWeight="900"
         fill={textColor}
-      >GARAGE<tspan fontSize="11" dy="-17" dx="2">®</tspan></text>
+      >GARAGE<tspan fontSize="11" dy="-18" dx="1">®</tspan></text>
     </svg>
   )
 }
