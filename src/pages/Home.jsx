@@ -259,8 +259,8 @@ export default function Home() {
           </AnimateOnScroll>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#1A1A1A]/10">
             {whyCards.map(({ icon, title, body }, i) => (
-              <AnimateOnScroll key={title} delay={i * 0.07}>
-                <div className="bg-white p-8 lg:p-10 group hover:bg-[#1A1A1A] transition-colors duration-300">
+              <AnimateOnScroll key={title} delay={i * 0.07} className="h-full">
+                <div className="h-full bg-white p-8 lg:p-10 group hover:bg-[#1A1A1A] transition-colors duration-300">
                   <div className="text-[#C85A0A] mb-5">{icon}</div>
                   <h3 className="font-display font-black uppercase text-xl text-[#1A1A1A] group-hover:text-white mb-3 transition-colors">
                     {title}

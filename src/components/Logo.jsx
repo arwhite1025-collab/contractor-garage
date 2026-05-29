@@ -4,15 +4,22 @@ export default function Logo({ white = false, compact = false }) {
   const icon = (
     <>
       <rect width="48" height="48" rx="4" fill="#1A1A1A" />
-      {/* C — orange bracket */}
-      <rect x="5"  y="7"  width="17" height="5"  fill="#C85A0A" />
-      <rect x="5"  y="7"  width="5"  height="34" fill="#C85A0A" />
-      <rect x="5"  y="36" width="17" height="5"  fill="#C85A0A" />
-      {/* G — white bracket with crossbar */}
-      <rect x="26" y="7"  width="17" height="5"  fill="#FFFFFF" />
-      <rect x="26" y="7"  width="5"  height="34" fill="#FFFFFF" />
-      <rect x="26" y="36" width="17" height="5"  fill="#FFFFFF" />
-      <rect x="35" y="22" width="8"  height="5"  fill="#FFFFFF" />
+      <text
+        x="12" y="38"
+        textAnchor="middle"
+        fontFamily="'Barlow Condensed', 'Arial Narrow', sans-serif"
+        fontSize="36"
+        fontWeight="900"
+        fill="#C85A0A"
+      >C</text>
+      <text
+        x="36" y="38"
+        textAnchor="middle"
+        fontFamily="'Barlow Condensed', 'Arial Narrow', sans-serif"
+        fontSize="36"
+        fontWeight="900"
+        fill="#FFFFFF"
+      >G</text>
     </>
   )
 
