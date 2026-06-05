@@ -220,7 +220,7 @@ export default function Locations() {
                 to="/brand-with-us"
                 className="inline-block font-display font-bold uppercase tracking-wider text-sm bg-[#C85A0A] text-white px-8 py-3.5 hover:bg-[#A84808] transition-colors"
               >
-                Brand With Us →
+                Development Consulting →
               </Link>
             </div>
           </AnimateOnScroll>

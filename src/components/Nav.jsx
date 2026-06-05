@@ -2,7 +2,7 @@
   Nav — sticky top navigation bar.
   - Transparent when at the top of the page (over hero images); dark when scrolled.
   - Active route is highlighted in orange (#C85A0A).
-  - "Brand With Us" always renders as an orange bordered CTA button.
+  - "Development Consulting" always renders as an orange bordered CTA button.
   - Mobile: animated hamburger menu that collapses to a full-width drawer.
   - Logo always renders in white (white prop) since the nav is always on a dark background.
 */
@@ -14,7 +14,7 @@ const links = [
   { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
   { label: 'Locations', to: '/locations' },
-  { label: 'Brand With Us', to: '/brand-with-us', cta: true },
+  { label: 'Development Consulting', to: '/brand-with-us', cta: true },
 ]
 
 export default function Nav() {

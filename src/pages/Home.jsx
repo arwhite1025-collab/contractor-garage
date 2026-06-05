@@ -32,53 +32,52 @@ const whyCards = [
       </svg>
     ),
     title: 'Right-Sized Units',
-    body: '500–1,500 SF bays match exactly what small trade businesses actually need — not a cramped storage unit, not an oversized flex suite.',
+    body: '750–1,500 SF bays match exactly what small trade businesses actually need — not a cramped storage unit, not an oversized flex suite.',
   },
   {
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15v-4h-2v4H9l3 3 3-3h-2zm0-8V5h-2v4H9l3-3 3 3h-2z" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v8M9 11l3 3 3-3" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
     title: 'Affordable Rents',
-    body: 'Below market flex rates mean tenants stay for years. Low churn keeps your NOI predictable and your headaches minimal.',
+    body: 'Below market flex rates mean tenants stay for years. Simpler and less expensive than flex space — you get what your business actually needs, nothing more.',
   },
   {
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
       </svg>
     ),
-    title: 'Recession Resistant',
-    body: 'Tradespeople are among the last to cut workspace. Demand held strong in 2008 and through every cycle since — by design.',
+    title: 'Drive-In Access',
+    body: 'Large maneuverable lots and 10-foot overhead doors let you pull a full truck and trailer straight in. No tight turns, no wasted time.',
   },
   {
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582M20 20v-5h-.581M4.582 9A8 8 0 0119.419 15M19.418 15A8 8 0 014.581 9" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
       </svg>
     ),
-    title: 'Repeatable by Design',
-    body: 'The model is intentionally simple and standardized. Once you build one, you know exactly how to build the next — in any market.',
+    title: 'Lights & Power',
+    body: 'Every bay comes with real lighting and electric service. Show up, plug in, and get to work — not a dark padlocked storage unit.',
   },
   {
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
       </svg>
     ),
-    title: 'Simple to Build',
-    body: 'No complex HVAC, no restrooms, no storefront build-out. Basic industrial construction with strong returns — developers love the economics.',
+    title: 'Built for the Trades',
+    body: 'Insulated bays and heavier-duty construction mean you work comfortably year-round — purpose-built for the trades, not converted from something else.',
   },
   {
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
       </svg>
     ),
-    title: 'Strong Occupancy',
-    body: 'Kevin\'s projects routinely fill before construction is complete. The demand is there — it\'s been underserved for decades.',
+    title: 'Skip the Overhead',
+    body: 'No storefront requirements, no office buildout, no unnecessary square footage. Functional workspace at the right price — nothing more, nothing less.',
   },
 ]
 
@@ -193,15 +192,16 @@ export default function Home() {
               </AnimateOnScroll>
               <AnimateOnScroll delay={0.1}>
                 <p className="text-[#1A1A1A]/70 text-base lg:text-lg leading-relaxed mb-6">
-                  Contractor Garage™ fills a gap that has been overlooked for decades.
-                  It's not a storage unit — tenants work out of these spaces every day.
-                  It's not flex office — there's no HVAC to pay for, no restrooms, no
-                  storefront buildout eating your margins.
+                  Contractor Garage™ bridges the gap between basic storage and expensive
+                  flex space — and it's been overlooked for decades. Storage gives you a
+                  dark padlocked box. Flex space loads you down with office buildout,
+                  storefronts, and overhead you never needed.
                 </p>
                 <p className="text-[#1A1A1A]/70 text-base lg:text-lg leading-relaxed mb-10">
-                  What it is: a 500–1,500 SF bay with a 10-foot overhead door, basic
-                  electric, and a concrete floor. The right size. The right price.
-                  Something that actually works for the trades.
+                  What it is: insulated 750–1,500 SF bays with real lighting, electric
+                  service, and a large maneuverable lot to pull a truck and trailer
+                  straight in. Heavier-duty construction built for the trades. Simpler
+                  and less expensive than flex space. Far more functional than storage.
                 </p>
                 <Link
                   to="/about"

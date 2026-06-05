@@ -32,7 +32,7 @@ export default function Footer() {
                 { label: 'Home', to: '/' },
                 { label: 'About Kevin', to: '/about' },
                 { label: 'Locations', to: '/locations' },
-                { label: 'Brand With Us', to: '/brand-with-us' },
+                { label: 'Development Consulting', to: '/brand-with-us' },
               ].map(({ label, to }) => (
                 <li key={to}>
                   <Link

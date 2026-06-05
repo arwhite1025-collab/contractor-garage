@@ -87,7 +87,7 @@ export default function About() {
                   Kevin Combs spent the early 2000s working as an engineer. By 2005 he
                   had spotted a gap in the market that nobody was filling: small trade
                   businesses — plumbers, electricians, landscapers, contractors — needed
-                  500–1,000 SF of working space. Not storage. Not flex office. Something
+                  750–1,500 SF of working space. Not storage. Not flex office. Something
                   in between that didn't exist.
                 </p>
                 <p>
@@ -203,7 +203,7 @@ export default function About() {
                 to="/brand-with-us"
                 className="flex-shrink-0 inline-block font-display font-bold uppercase tracking-wider text-sm bg-white text-[#C85A0A] px-10 py-4 hover:bg-[#1A1A1A] hover:text-white transition-colors"
               >
-                Brand With Us →
+                Development Consulting →
               </Link>
             </div>
           </AnimateOnScroll>

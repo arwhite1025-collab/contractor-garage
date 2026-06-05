@@ -29,12 +29,43 @@ const subscriptionFeatures = [
   'Credibility with lenders and investors',
 ]
 
-const courseFeatures = [
-  '5-part self-paced video course',
-  'Site selection through scaling',
-  'Construction cost breakdowns',
-  'Lease templates and tenant screening',
-  'Bonus: banker video on construction loans',
+const investmentCase = [
+  {
+    icon: (
+      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      </svg>
+    ),
+    title: 'Recession Resistant',
+    body: 'Tradespeople are among the last to cut workspace. Demand held strong in 2008 and through every cycle since — by design.',
+  },
+  {
+    icon: (
+      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582M20 20v-5h-.581M4.582 9A8 8 0 0119.419 15M19.418 15A8 8 0 014.581 9" />
+      </svg>
+    ),
+    title: 'Repeatable by Design',
+    body: 'The model is intentionally simple and standardized. Once you build one, you know exactly how to build the next — in any market.',
+  },
+  {
+    icon: (
+      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
+      </svg>
+    ),
+    title: 'Simple to Build',
+    body: 'No complex HVAC, no restrooms, no storefront build-out. Basic industrial construction with strong returns — developers love the economics.',
+  },
+  {
+    icon: (
+      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0" />
+      </svg>
+    ),
+    title: 'Strong Occupancy',
+    body: "Kevin's projects routinely fill before construction is complete. The demand is there — it's been underserved for decades.",
+  },
 ]
 
 export default function BrandWithUs() {
@@ -132,7 +163,7 @@ export default function BrandWithUs() {
             </p>
           </AnimateOnScroll>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl">
             {/* Card 1: Development Consulting — FEATURED */}
             <AnimateOnScroll delay={0.05}>
               <div className="relative bg-[#1A1A1A] text-white flex flex-col h-full border-t-4 border-[#C85A0A] shadow-2xl shadow-[#1A1A1A]/20">
@@ -226,46 +257,6 @@ export default function BrandWithUs() {
               </div>
             </AnimateOnScroll>
 
-            {/* Card 3: Online Course */}
-            <AnimateOnScroll delay={0.15}>
-              <div className="bg-white border border-[#1A1A1A]/12 flex flex-col h-full">
-                <div className="p-8 lg:p-10 flex flex-col flex-1">
-                  <div className="mb-6">
-                    <p className="font-display font-bold uppercase tracking-widest text-[#C85A0A] text-xs mb-2">
-                      Self-Paced via Teachable
-                    </p>
-                    <h3 className="font-display font-black uppercase text-2xl lg:text-3xl text-[#1A1A1A] mb-1">
-                      Online Course
-                    </h3>
-                    <div className="flex items-end gap-2 mt-4">
-                      <span className="font-display font-black text-2xl text-[#1A1A1A]">On Teachable</span>
-                    </div>
-                  </div>
-
-                  <div className="w-full h-px bg-[#1A1A1A]/10 mb-6" />
-
-                  <ul className="space-y-3 flex-1">
-                    {courseFeatures.map((f) => (
-                      <li key={f} className="flex items-start gap-3 text-sm text-[#1A1A1A]/70">
-                        <svg className="w-4 h-4 text-[#C85A0A] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                        </svg>
-                        {f}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="mt-8">
-                    <a
-                      href="#"
-                      className="block w-full text-center font-display font-bold uppercase tracking-wider text-sm border-2 border-[#C85A0A] text-[#C85A0A] py-3.5 hover:bg-[#C85A0A] hover:text-white transition-colors"
-                    >
-                      View Course →
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </AnimateOnScroll>
           </div>
 
           {/* Not a franchise note */}
@@ -274,6 +265,35 @@ export default function BrandWithUs() {
               ✦ This is a brand license, not a franchise. No royalties, no territory exclusivity, no corporate overhead.
             </p>
           </AnimateOnScroll>
+        </div>
+      </section>
+
+      {/* ── INVESTMENT CASE ──────────────────────────────────── */}
+      <section className="bg-[#F7F6F4] py-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <AnimateOnScroll>
+            <p className="font-display font-bold uppercase tracking-[0.2em] text-[#C85A0A] text-xs mb-4">
+              The Investment Case
+            </p>
+            <h2 className="font-display font-black text-[#1A1A1A] uppercase leading-none text-5xl lg:text-6xl mb-14">
+              Why It Works
+            </h2>
+          </AnimateOnScroll>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#1A1A1A]/10">
+            {investmentCase.map(({ icon, title, body }, i) => (
+              <AnimateOnScroll key={title} delay={i * 0.07} className="h-full">
+                <div className="h-full bg-white p-8 group hover:bg-[#1A1A1A] transition-colors duration-300">
+                  <div className="text-[#C85A0A] mb-5">{icon}</div>
+                  <h3 className="font-display font-black uppercase text-lg text-[#1A1A1A] group-hover:text-white mb-3 transition-colors">
+                    {title}
+                  </h3>
+                  <p className="text-[#1A1A1A]/60 group-hover:text-white/60 text-sm leading-relaxed transition-colors">
+                    {body}
+                  </p>
+                </div>
+              </AnimateOnScroll>
+            ))}
+          </div>
         </div>
       </section>
 
