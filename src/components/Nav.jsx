@@ -1,3 +1,11 @@
+/*
+  Nav — sticky top navigation bar.
+  - Transparent when at the top of the page (over hero images); dark when scrolled.
+  - Active route is highlighted in orange (#C85A0A).
+  - "Brand With Us" always renders as an orange bordered CTA button.
+  - Mobile: animated hamburger menu that collapses to a full-width drawer.
+  - Logo always renders in white (white prop) since the nav is always on a dark background.
+*/
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import Logo from './Logo'

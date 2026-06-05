@@ -1,3 +1,12 @@
+/*
+  BrandWithUs — developer/investor pitch page with pricing cards and a contact form.
+  Sections: Hero → Podcast banner → Pricing cards (3) → Live Seminar split → Contact form.
+
+  CONTACT FORM NOTE: The form currently uses local React state only (handleSubmit just
+  sets submitted=true). To wire it up, replace handleSubmit with an Axios POST to your
+  backend or a form service (e.g. Formspree, EmailJS). The form fields are:
+    name, email, market (city), message.
+*/
 import { useState } from 'react'
 import AnimateOnScroll from '../components/AnimateOnScroll'
 import presentingImage from '../assets/presenting.png'

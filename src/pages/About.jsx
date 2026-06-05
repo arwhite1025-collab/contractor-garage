@@ -1,3 +1,11 @@
+/*
+  About — Kevin Combs founder bio page.
+  Sections: Hero → Bio (photo + text, with stats bar) → What Kevin Offers (3 cards) →
+            Video placeholder → CTA band.
+
+  The video section is a placeholder — replace the dark div with an actual <iframe>
+  or video player when the video asset is ready.
+*/
 import { Link } from 'react-router-dom'
 import AnimateOnScroll from '../components/AnimateOnScroll'
 import kevinImage from '../assets/kevin.jpg'

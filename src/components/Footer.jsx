@@ -1,3 +1,7 @@
+/*
+  Footer — 4-column dark footer with brand info, nav links, services list, and contact.
+  Bottom bar shows copyright and tagline.
+*/
 import { Link } from 'react-router-dom'
 import Logo from './Logo'
 

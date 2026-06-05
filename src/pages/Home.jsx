@@ -1,3 +1,12 @@
+/*
+  Home — landing page.
+  Sections: Hero → What Is It (split) → Who It's For → Why It Works (6-card grid) → Developer CTA.
+
+  The "Why It Works" grid uses a gap-px pattern: the parent has a light gray background
+  and children have white backgrounds — the gray shows through as 1px separators.
+  AnimateOnScroll wrappers inside the grid need className="h-full" or cards won't fill
+  their cells and gray will bleed above/below.
+*/
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import AnimateOnScroll from '../components/AnimateOnScroll'

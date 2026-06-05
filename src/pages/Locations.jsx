@@ -1,3 +1,13 @@
+/*
+  Locations — full list of all Contractor Garage™ locations with availability status.
+  Sections: Hero → Availability banner → Location table (desktop) / cards (mobile) → Developer CTA.
+
+  Location data is a static array at the top of this file. To pull from an API instead,
+  replace the `locations` array with a useState + useEffect fetch (Axios works well here).
+  Status values: "Available" | "Full" | "Coming Soon" — each maps to a color config in statusConfig.
+
+  TODO: integrate a Leaflet map showing pin locations (lat/lng not yet in the data array).
+*/
 import { Link } from 'react-router-dom'
 import AnimateOnScroll from '../components/AnimateOnScroll'
 import locationImage from '../assets/location.jpg'

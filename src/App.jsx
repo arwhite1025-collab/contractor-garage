@@ -1,3 +1,5 @@
+// Root component — sets up client-side routing with React Router.
+// Nav and Footer are rendered outside <Routes> so they appear on every page.
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Nav from './components/Nav'
 import Footer from './components/Footer'

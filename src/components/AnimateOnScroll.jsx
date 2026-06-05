@@ -1,3 +1,14 @@
+/*
+  AnimateOnScroll — wraps any content in a Framer Motion fade-up animation
+  that triggers once when the element enters the viewport.
+
+  Props:
+    children   – content to animate
+    className  – forwarded to the motion.div (use "h-full" inside CSS grids
+                 so the wrapper doesn't collapse shorter than its cell)
+    delay      – seconds before the animation starts (default 0)
+    direction  – entry direction: "up" | "down" | "left" | "right" (default "up")
+*/
 import { motion } from 'framer-motion'
 
 export default function AnimateOnScroll({
