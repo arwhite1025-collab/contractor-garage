@@ -18,10 +18,9 @@
   Gallery: react-gallery-carousel. Populate location.images[] with real URLs
   from the API to enable it; empty array renders a placeholder instead.
 */
-import { useState } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useParams, Link, Navigate } from 'react-router-dom'
-import Carousel from 'react-gallery-carousel'
-import 'react-gallery-carousel/dist/index.css'
+import { AnimatePresence, motion } from 'framer-motion'
 import AnimateOnScroll from '../components/AnimateOnScroll'
 import { getLocationBySlug } from '../data/locations'
 import heroImage from '../assets/hero.jpg'
@@ -59,6 +58,8 @@ export default function LocationDetail() {
   const [payModalOpen, setPayModalOpen] = useState(false)
   const [payUnit, setPayUnit] = useState('')
   const [payAmount, setPayAmount] = useState('')
+  const [galleryIndex, setGalleryIndex] = useState(0)
+  const [galleryDirection, setGalleryDirection] = useState(1)
 
   if (!location) return <Navigate to="/directory" replace />
 
@@ -70,11 +71,22 @@ export default function LocationDetail() {
 
   // Placeholder images for gallery — replace with location.images when API provides them
   const galleryImages = location.images?.length
-    ? location.images.map((src, i) => ({ src, alt: `${location.name} photo ${i + 1}` }))
-    : [
-        { src: heroImage, alt: `${location.name} exterior` },
-        { src: locationImage, alt: `${location.name} lot view` },
-      ]
+    ? location.images
+    : [heroImage, locationImage]
+
+  const goTo = useCallback((idx, dir) => {
+    setGalleryDirection(dir)
+    setGalleryIndex(idx)
+  }, [])
+
+  const prev = () => goTo((galleryIndex - 1 + galleryImages.length) % galleryImages.length, -1)
+  const next = useCallback(() => goTo((galleryIndex + 1) % galleryImages.length, 1), [galleryIndex, galleryImages.length, goTo])
+
+  useEffect(() => {
+    if (galleryImages.length < 2) return
+    const t = setInterval(next, 4000)
+    return () => clearInterval(t)
+  }, [next, galleryImages.length])
 
   return (
     <main>
@@ -432,17 +444,57 @@ export default function LocationDetail() {
             </h2>
           </AnimateOnScroll>
           <AnimateOnScroll delay={0.1}>
-            {/* Carousel fills its container — give it an explicit height */}
-            <div className="max-w-4xl" style={{ height: 480 }}>
-              <Carousel
-                images={galleryImages}
-                style={{ height: 480, borderRadius: 0 }}
-                isAutoPlaying
-                autoPlayInterval={4000}
-                hasThumbnails={galleryImages.length > 1}
-                hasIndexBoard={false}
-                canAutoPlay={galleryImages.length > 1}
-              />
+            <div className="relative max-w-4xl overflow-hidden bg-[#1A1A1A]" style={{ aspectRatio: '16/9' }}>
+              <AnimatePresence initial={false} custom={galleryDirection}>
+                <motion.img
+                  key={galleryIndex}
+                  src={galleryImages[galleryIndex]}
+                  alt={`${location.name} photo ${galleryIndex + 1}`}
+                  custom={galleryDirection}
+                  variants={{
+                    enter: (d) => ({ x: d > 0 ? '100%' : '-100%', opacity: 0 }),
+                    center: { x: 0, opacity: 1 },
+                    exit: (d) => ({ x: d > 0 ? '-100%' : '100%', opacity: 0 }),
+                  }}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </AnimatePresence>
+
+              {/* Arrows */}
+              {galleryImages.length > 1 && (
+                <>
+                  <button
+                    onClick={prev}
+                    className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 bg-black/50 hover:bg-black/80 flex items-center justify-center text-white transition-colors"
+                  >
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                  <button
+                    onClick={() => { setGalleryDirection(1); next() }}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 bg-black/50 hover:bg-black/80 flex items-center justify-center text-white transition-colors"
+                  >
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                  {/* Dots */}
+                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+                    {galleryImages.map((_, i) => (
+                      <button
+                        key={i}
+                        onClick={() => goTo(i, i > galleryIndex ? 1 : -1)}
+                        className={`w-2 h-2 rounded-full transition-colors ${i === galleryIndex ? 'bg-white' : 'bg-white/40'}`}
+                      />
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
             {!location.images?.length && (
               <p className="mt-3 text-[#1A1A1A]/35 text-xs font-body italic">
