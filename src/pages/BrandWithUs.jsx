@@ -126,7 +126,9 @@ export default function BrandWithUs() {
           </div>
           <div className="flex gap-3">
             <a
-              href="#"
+              href="https://open.spotify.com/episode/4kDKGfgYw4M9CHObCPEnY8"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 font-display font-bold uppercase tracking-wider text-xs bg-[#1DB954] text-white px-5 py-2.5 hover:opacity-90 transition-opacity"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -135,7 +137,9 @@ export default function BrandWithUs() {
               Spotify
             </a>
             <a
-              href="#"
+              href="https://podcasts.apple.com/us/podcast/e14-kevin-combs-contractor-garages/id1740211062?i=1000670826834"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 font-display font-bold uppercase tracking-wider text-xs bg-[#872EC4] text-white px-5 py-2.5 hover:opacity-90 transition-opacity"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
